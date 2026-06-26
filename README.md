@@ -21,7 +21,28 @@ python -m pip install -e .
 
 ## Data and Checkpoints
 
-The public scripts expect the following layout:
+Preprocessed data and released checkpoints are hosted at
+[Haoruili46/InertialAR](https://huggingface.co/Haoruili46/InertialAR).
+Download them into the repository root with:
+
+```bash
+python -m pip install -U huggingface_hub
+python - <<'PY'
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Haoruili46/InertialAR",
+    repo_type="model",
+    allow_patterns=["data/**", "ckpt/**"],
+    local_dir=".",
+)
+PY
+```
+
+See [docs/DATA_AND_CHECKPOINTS.md](docs/DATA_AND_CHECKPOINTS.md) for
+dataset-only and checkpoint-only download commands.
+
+After download, the public scripts expect the following layout:
 
 ```text
 data/
