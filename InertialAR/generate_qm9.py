@@ -616,7 +616,7 @@ if __name__ == '__main__':
             print(f"Created output directory: {output_dir}")
 
         print(f"Saving {len(molecules_to_save)} generated molecules to {output_file_path}")
-        print(f"Example command: python eval_transform.py --input_npz {output_file_path} --output_text {output_file_path_txt} --dataset_name qm9")
+        print(f"Example command: DATASET_NAME=qm9 bash scripts/evaluation/evaluate_generated.sh {output_file_path} {output_file_path_txt}")
         try:
             np.savez_compressed(
                 output_file_path,
