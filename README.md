@@ -1,9 +1,9 @@
 # InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames
 
 [![Conference](https://img.shields.io/badge/ICML-2026-blue.svg)](https://icml.cc/)
-[![Paper](https://img.shields.io/badge/Paper-Coming%_Soon-green.svg)](#)
+[![Paper](https://img.shields.io/badge/Paper-OpenReview-green.svg)](https://openreview.net/pdf?id=GUu3Bi41Fm)
 
-This is the official repository for the paper **InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames**, accepted at **ICML 2026**.
+This is the official repository for the paper **[InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames](https://openreview.net/pdf?id=GUu3Bi41Fm)**, accepted at **ICML 2026**.
 
 ## Setup
 
