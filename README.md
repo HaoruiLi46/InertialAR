@@ -57,6 +57,16 @@ ckpt/
 
 Set `DATA_ROOT` or `CKPT_PATH` to override these defaults.
 
+The released processed data above is sufficient for training and generation.
+For users who want to rerun preprocessing from raw sources:
+
+- QM9 raw files are included with the released `data/QM9` download.
+- Drug raw data follows the EDM and GeoLDM data preparation workflow.
+- B3LYP data can be prepared from the 17M
+  [Haoruili46/b3lyp_pm6_chon300nosalt](https://huggingface.co/datasets/Haoruili46/b3lyp_pm6_chon300nosalt)
+  dataset; the released B3LYP processed dataset is built as a 1M subset using
+  the provided preprocessing code.
+
 ## Generation
 
 The generation scripts reproduce the released checkpoint settings:

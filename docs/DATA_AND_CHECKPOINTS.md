@@ -108,3 +108,32 @@ hf download Haoruili46/InertialAR \
 The training and generation scripts use `DATA_ROOT=./data` and the checkpoint
 folders under `./ckpt` by default. Override `DATA_ROOT` or `CKPT_PATH` if you
 store the assets somewhere else.
+
+## Raw Data Sources
+
+The released processed datasets above are enough to reproduce the public
+training and generation commands. If you want to rerun preprocessing from raw
+sources:
+
+- QM9 raw files are included in the same Hugging Face download under
+  `data/QM9/raw`.
+- Drug raw data follows the EDM and GeoLDM data preparation workflow.
+- B3LYP data can be prepared from the 17M
+  [Haoruili46/b3lyp_pm6_chon300nosalt](https://huggingface.co/datasets/Haoruili46/b3lyp_pm6_chon300nosalt)
+  dataset. Download it with:
+
+```bash
+python -m pip install -U huggingface_hub
+python - <<'PY'
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Haoruili46/b3lyp_pm6_chon300nosalt",
+    repo_type="dataset",
+    local_dir="./raw_data/b3lyp_pm6_chon300nosalt",
+)
+PY
+```
+
+The released B3LYP processed dataset is built from a 1M subset using the
+provided preprocessing code.
